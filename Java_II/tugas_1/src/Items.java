@@ -110,7 +110,7 @@ public class Items {
       while (rs.next()) {
          System.out.println("Nama Item: " + rs.getString("item_name"));
          System.out.println("Kategori: " + rs.getString("category_name"));
-         System.out.println("Harga: " + rs.getString("price"));
+         System.out.println("Harga: " + rs.getInt("price"));
          System.out.println("Jumlah: " + rs.getString("quantity"));
          System.out.println("Supplier: " + rs.getString("supplier_name"));
          System.out.println("---------------------");
