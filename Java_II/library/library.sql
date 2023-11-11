@@ -42,6 +42,6 @@ BEGIN
    SELECT date_add(@tgl_pinjam, INTERVAL 7 DAY) INTO @tgl_kembali;
    INSERT INTO peminjaman (kode_anggota, isbn_buku, tanggal_pinjam, tanggal_kembali) VALUES
       (_anggota, _buku, @tgl_pinjam, @tgl_kembali);
-   SELECT jumlah_halaman INTO @jml_buku FROM buku WHERE isbn = _buku;
+   SELECT jumlah_eksemplar INTO @jml_buku FROM buku WHERE isbn = _buku;
    UPDATE buku SET jumlah_eksemplar = (@jml_buku - 1) WHERE isbn = _buku;
 END;

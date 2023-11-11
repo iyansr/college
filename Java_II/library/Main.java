@@ -116,7 +116,6 @@ public class Main {
 
             switch (choice) {
                case "1":
-                  System.out.println("ASDASDASD");
                   getAllBuku();
                   break;
                case "2":
@@ -126,7 +125,7 @@ public class Main {
                   pinjamBuku();
                   break;
                case "4":
-                  System.out.println("Exiting program. Goodbye!");
+                  System.out.println("Keluar, bye!");
                   System.exit(0);
                   break;
 
